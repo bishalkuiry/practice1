@@ -17,6 +17,15 @@ const schema = new Schema({
     },
     lastLogin: {
         type: Date
+    },
+    dob: {
+        type: Date
+    },
+    institute: {
+        type: String
+    },
+    standard: {
+        type: String
     }
 });
 
