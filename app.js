@@ -106,7 +106,7 @@ app.get('/users', async (req, res) => {
         return res.send('Please provide either name or phone number to search');
     }
     console.log(filter);
-    let users = await usersDb.find(filter).select({ name: 1, phone: 1, _id: 1 });
+    let users = await usersDb.find(filter).select({ password:0, __v:0 });
     if (users.length == 0) {
         return res.send('No users found');
     }
